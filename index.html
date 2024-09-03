@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Podcasts.js Experiment</title>
+
+    <link href="css/holdfast.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>
+        Holdfast Podcasts
+    </h1>
+    <div id="holdfast-app">
+        <div id="holdfast-init-app">
+            <button id="holdfast-init"
+                class="button holdfast-button"
+                type="button"
+            >
+                Boot Up Holdfast
+            </button>
+        </div>
+        <div>
+            <div id="holdfast-podcasts-app" style="display: none">
+                <h2>Choose a Podcast</h2>
+                <ul id="holdfast-podcast-list" class="holdfast-folder-list"></ul>
+
+                <form id="holdfast-podcast-creation" action="" method="post">
+                    <label for="holdfast-podcast-input">
+                        New Podcast
+                    </label>
+                    <div class="flex">
+                        <input type="text" id="holdfast-podcast-input" name="podcast">
+                        <button id="holdfast-podcast-create"
+                            class="button holdfast-button"
+                            type="submit"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="holdfast-podcast-app" style="display: none">
+                <h2>
+                    Podcast:
+                    <span id="holdfast-active-podcast"></span>
+                </h2>
+
+
+                <div id="holdfast-podcast-episode" style="display: none;">
+                    <h3>
+                        Episode:
+                        <span id="holdfast-active-episode"></span>
+                    </h3>
+                    <ul id="holdfast-episode-list"
+                        class="holdfast-file-list"
+                    ></ul>
+
+                    <div>
+                        <button id="holdfast-episode-file-upload"
+                            class="button holdfast-button"
+                            type="button"
+                            data-position="-1"
+                        >
+                            Add New Audio
+                        </button>
+                    </div>
+                </div>
+
+                <div id="holdfast-podcast-episodes">
+                    <h3>Episodes</h3>
+                    <ul id="holdfast-episodes-list"
+                        class="holdfast-folder-list"
+                    ></ul>
+
+                    <div>
+                        <button id="holdfast-episode-upload"
+                            class="button holdfast-button"
+                            type="button"
+                            data-position="-1"
+                        >
+                            Add New Episode
+                        </button>
+                    </div>
+                </div>
+
+                <div id="holdfast-podcast-reusables">
+                    <h3>Reusables</h3>
+                    <ul id="holdfast-reusables-list"
+                        class="holdfast-file-list"
+                    ></ul>
+
+                    <div>
+                        <button id="holdfast-reusable-upload"
+                            class="button holdfast-button"
+                            type="button"
+                            data-position="-1"
+                        >
+                            Add New Reusable
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/holdfast.js"></script>
+</body>
+</html>
